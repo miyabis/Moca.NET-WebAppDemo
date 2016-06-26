@@ -68,15 +68,6 @@ Partial Public Class Index
     Protected WithEvents txtID As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''txtCode コントロール。
-    '''</summary>
-    '''<remarks>
-    '''自動生成されたフィールド。
-    '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-    '''</remarks>
-    Protected WithEvents txtCode As Global.System.Web.UI.WebControls.TextBox
-    
-    '''<summary>
     '''txtName コントロール。
     '''</summary>
     '''<remarks>
@@ -129,4 +120,13 @@ Partial Public Class Index
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents grdMain As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''valid コントロール。
+    '''</summary>
+    '''<remarks>
+    '''自動生成されたフィールド。
+    '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+    '''</remarks>
+    Protected WithEvents valid As Global.System.Web.UI.WebControls.CustomValidator
 End Class

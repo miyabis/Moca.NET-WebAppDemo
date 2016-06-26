@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class Base
-
+    
     '''<summary>
     '''Head1 コントロール。
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class Base
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
-
+    
     '''<summary>
     '''Head コントロール。
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class Base
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents Head As Global.System.Web.UI.WebControls.ContentPlaceHolder
-
+    
     '''<summary>
     '''frmMain コントロール。
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class Base
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents frmMain As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
     '''ScriptManager1 コントロール。
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class Base
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
-
+    
     '''<summary>
     '''pnlHidden コントロール。
     '''</summary>
@@ -57,7 +57,16 @@ Partial Public Class Base
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents pnlHidden As Global.System.Web.UI.WebControls.Panel
-
+    
+    '''<summary>
+    '''MessageArea コントロール。
+    '''</summary>
+    '''<remarks>
+    '''自動生成されたフィールド。
+    '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+    '''</remarks>
+    Protected WithEvents MessageArea As Global.System.Web.UI.WebControls.Panel
+    
     '''<summary>
     '''MainContent コントロール。
     '''</summary>
@@ -66,7 +75,7 @@ Partial Public Class Base
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents MainContent As Global.System.Web.UI.WebControls.ContentPlaceHolder
-
+    
     '''<summary>
     '''DebugManager1 コントロール。
     '''</summary>
@@ -75,7 +84,7 @@ Partial Public Class Base
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
     Protected WithEvents DebugManager1 As Global.Moca.Web.UI.DebugManager
-
+    
     '''<summary>
     '''Scripts コントロール。
     '''</summary>

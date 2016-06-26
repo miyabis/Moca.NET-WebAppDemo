@@ -1,5 +1,5 @@
 ﻿Public Class Index
-    Inherits Moca.Web.UI.MocaPage
+    Inherits UI.CommonPage
 
 #Region " Declare "
 
@@ -63,7 +63,7 @@
     Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
         Dim value As New DemoEntity
 
-        If Not Me.UpdateEntity(Me, value, AddressOf _valid) Then
+        If Not Me.UpdateEntity(Me, value, AddressOf _validInsert) Then
             Return
         End If
 
@@ -84,8 +84,11 @@
         grdMain.DataBind()
     End Sub
 
-    Private Sub _valid(sender As Object, e As Moca.UpdateEntityValidateArgs)
+    Private Sub _validInsert(sender As Object, e As Moca.UpdateEntityValidateArgs)
+        Dim webCtrl() As WebControl = New WebControl() {sender}
 
+        ' メッセージ設定
+        setErrorMessage(e.Caption, Me.valid, webCtrl, e.Value, e.ValidateResultType, e.Min, e.Max)
     End Sub
 
 #End Region

@@ -1,4 +1,4 @@
-Moca.NET-WinAppDemo
+Moca.NET Web Form App Demo
 ===================
 
 sample application that uses a moca.net
@@ -19,18 +19,20 @@ sample application that uses a moca.net
 Nuget にて Moca のライブラリを追加します。  
 * Web の場合、『[Moca.NET Project Template Web Form](https://www.nuget.org/packages/Moca.NETWebFormsProject/)』
 
+※Moca.NETのプロジェクトテンプレートを使ったときは既に追加されているため不要です。
+
 #### ライブラリの更新
 追加した Moca のライブラリを最新にします。
 
 #### log4net を使う場合
 WebConfigTransformAssemblyInfo.(vb or cs) ファイルの log4net 部分のアセンブリ属性を有効にする。
 
-C# : Properties\WebConfigTransformAssemblyInfo.cs file Please cancel comment.
+C# : Properties\WebConfigTransformAssemblyInfo.cs
 ```
 [assembly: log4net.Config.XmlConfigurator(ConfigFile=@"log4net.config", Watch=true)]
 ```
 
-VB : My Project\WebConfigTransformAssemblyInfo.vb file Please cancel comment.
+VB : My Project\WebConfigTransformAssemblyInfo.vb
 ```
 <Assembly: log4net.Config.XmlConfigurator(ConfigFile:="log4net.config", Watch:=True)>
 ```
@@ -38,12 +40,12 @@ VB : My Project\WebConfigTransformAssemblyInfo.vb file Please cancel comment.
 #### 設定ファイルの暗号化
 WebConfigTransformAssemblyInfo.(vb or cs) ファイルの Moca 部分のアセンブリ属性を有効にし、暗号種別、暗号化（複合化）したいセクション名を入力する。
 
-C# : add Assembly property.
+C# :
 ```
 [assembly: Moca.Configuration.SectionProtection(Moca.Configuration.ProtectionProviderType.DPAPI, "Section Name")]
 ```
 
-VB : add Assembly property.
+VB :
 ```
 <Assembly: Moca.Configuration.SectionProtection(Moca.Configuration.ProtectionProviderType.DPAPI, "Section Name")>
 ```
@@ -58,18 +60,18 @@ WebActivator を利用して初期化・終了処理を行っています。
 アセンブリ属性は MocaAssemblyInfo.(vb or cs) ファイルに定義してあります。
 
 #### Web フォーム作成
-Moca.NET テンプレートの Web フォームから作成してください。  
+Moca.NET テンプレートの 「Web フォーム」から作成してください。  
 ※ フォームの継承先が Page から Moca.Web.UI.MocaPage に変更されて作成されます。
 なお、マスターページ、ユーザーコントロール、APIコントローラークラスも同様に Moca のクラスを継承するように作成されます。
 
 #### セッションを使う場合
-Moca.NET テンプレートの Web Session インタフェース を使って作成します。
+Moca.NET テンプレートの 「Web Session インタフェース」を使って作成します。
 インタフェースへセッション変数名でプロパティを定義します。
 セッションを利用するページで Protected 以上でインタフェースを使ったフィールドを定義します。  
 ※ 実装クラスは不要です。Moca.NET で実行時に自動的にセッションを割り当てます。
 
 #### クッキーを使う場合
-Moca.NET テンプレートの Web Cookie インタフェース を使って作成します。  
+Moca.NET テンプレートの 「Web Cookie インタフェース」を使って作成します。  
 インタフェースには HttpCookie を返す読み取り専用プロパティを定義し、インタフェースを使う時はスニペットの ICookie を使ってフィールドを定義します。
 
 #### クエリー文字列を使う場合
@@ -92,11 +94,11 @@ End Interface
 Moca.NET では、データベースアクセスクラスを作成してアクセスします。
 
 ### エンティティ 作成
-Moca.NET テンプレートの『Entity クラス』で作成します。  
+Moca.NET テンプレートの「Entity クラス」で作成します。  
 ウィザード形式で、接続先DBを選択しSQLステートメントを実行することでクラスを作成します。
 
 ### Dao 作成
-Moca.NET テンプレートの『Dao クラス』で作成でき、インタフェースと実装クラスの構成で作成されます。
+Moca.NET テンプレートの「Dao クラス」で作成でき、インタフェースと実装クラスの構成で作成されます。
 接続先はインタフェース毎の指定となり、Dao 属性の引数に設定ファイル（Config）の connectionStrings キーを指定することでインタフェース内のメソッドがデータベースへアクセスできるようになります。
 メソッド内のコードはスニペット（DAODelete、DAOInsert、DAOSelect、DAOStoredPrepare、DAOStoredSelect、DAOStoredUpd、DAOUpdate）を使ってください。
 
@@ -108,7 +110,6 @@ TransactionScope（MSDTC）を使うときは設定ファイルの moca セク�
 ### Dao を使う
 クラスのフィールドとして Protected 以上で定義してください。
 インスタンス化はライブラリで自動で行うので New しないでください。
-
 
 ## アスペクト
 Moca.NET では、アスペクト属性を使ってインターセプターを割り込ませることができます。

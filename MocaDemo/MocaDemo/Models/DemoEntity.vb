@@ -27,6 +27,11 @@ Public Class DemoEntity
     Implements IEditableObject
 
 #Region " Declare "
+    ''' <summary>
+    ''' tbDemo テーブル定義を取得して列の桁数をチェックするときに使用する
+    ''' </summary>
+    Protected tableDefinition As IDemoDefinition
+
     Private _iD As String
 
     Private _code As Integer
@@ -42,6 +47,7 @@ Public Class DemoEntity
     ''' ID (ID) Property. 
     ''' </summary> 
     <Column("ID")>
+    <Caption("ID")>
     <BindControl("txtID")>
     <Validate(Moca.Util.ValidateTypes.Required Or Moca.Util.ValidateTypes.LenghtMax)>
     Public Property ID() As String
@@ -57,8 +63,6 @@ Public Class DemoEntity
     ''' Code (Code) Property. 
     ''' </summary> 
     <Column("Code")>
-    <BindControl("txtCode")>
-    <Validate(Moca.Util.ValidateTypes.Required)>
     Public Property Code() As Integer
         Get
             Return Me._code
@@ -72,6 +76,7 @@ Public Class DemoEntity
     ''' Name (Name) Property. 
     ''' </summary> 
     <Column("Name")>
+    <Caption("Name")>
     <BindControl("txtName")>
     <Validate(Moca.Util.ValidateTypes.Required Or Moca.Util.ValidateTypes.LenghtMax)>
     Public Property Name() As String
@@ -87,6 +92,7 @@ Public Class DemoEntity
     ''' Note (Note) Property. 
     ''' </summary> 
     <Column("Note")>
+    <Caption("Note")>
     <BindControl("txtNote")>
     <Validate(Moca.Util.ValidateTypes.LenghtMax)>
     Public Property Note() As String
@@ -150,7 +156,7 @@ End Class
 ''' <history> 
 ''' </history> 
 <Table(Sys.C_CONNECTION_STRING, "tbDemo")>
-Public Interface IDemoDefinitionDefinition
+Public Interface IDemoDefinition
 
     ''' <summary> 
     ''' Table (Table) Property. 

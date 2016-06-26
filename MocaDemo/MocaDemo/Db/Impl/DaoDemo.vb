@@ -20,7 +20,7 @@ Namespace Db.Impl
 		End Function
 
 		Public Function [Get](id As String) As System.Collections.Generic.IList(Of DemoEntity) Implements IDaoDemo.Get
-            Const C_SQL As String = "SELECT [ID],[Code],[Name],[Note] FROM [tbDemo] WHERE @ID IS NULL OR (@ID IS NOT NULL AND [ID]=@ID)"
+            Const C_SQL As String = "SELECT [ID],[Code],[Name],[Note] FROM [tbDemo] WHERE @ID IS NULL OR (@ID IS NOT NULL AND [ID] LIKE '%' + @ID + '%')"
 
             Using cmd As IDbCommandSelect = CreateCommandSelect(C_SQL)
                 cmd.SetParameter("ID", CNothing(id))
@@ -34,9 +34,9 @@ Namespace Db.Impl
 
 			Using cmd As IDbCommandStoredProcedure = CreateCommandStoredProcedure(C_SQL)
 				cmd.AddParameterValue(id)
-				cmd.AddParameterValue(code)
+                cmd.AddParameterValue(code)
 
-				Return cmd.Execute(Of DemoEntity)()
+                Return cmd.Execute(Of DemoEntity)()
 			End Using
 		End Function
 

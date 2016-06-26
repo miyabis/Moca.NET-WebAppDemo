@@ -20,19 +20,35 @@
         <asp:Label runat="server" ID="lblCounter"></asp:Label>
     </div>
 
-    <div style="margin: 20px 0;">
-        ID:<asp:TextBox runat="server" ID="txtID"></asp:TextBox>
-        Code:<asp:TextBox runat="server" ID="txtCode"></asp:TextBox>
-        Name:<asp:TextBox runat="server" ID="txtName"></asp:TextBox>
-        Note:<asp:TextBox runat="server" ID="txtNote"></asp:TextBox>
-        <asp:Button runat="server" ID="btnInsert" Text="Add" />
+    <div class="form-inline" style="margin: 20px 0;">
+        <div class="form-group">
+            <label class="sr-only" for="txtID">ID</label>
+            <asp:TextBox runat="server" ID="txtID" CssClass="form-control" placeholder="ID"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="txtName">Name</label>
+            <asp:TextBox runat="server" ID="txtName" CssClass="form-control" placeholder="Name"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="txtNote">Note</label>
+            <asp:TextBox runat="server" ID="txtNote" CssClass="form-control" placeholder="Note"></asp:TextBox>
+        </div>
+        <asp:Button runat="server" ID="btnInsert" Text="Add" CssClass="btn btn-primary" />
     </div>
 
     <div>
-        ID:<asp:TextBox runat="server" ID="txtSearchID"></asp:TextBox>
-        <asp:Button runat="server" ID="btnUpdate" Text="Search" />
-        <asp:GridView runat="server" ID="grdMain" Width="100%"></asp:GridView>
+        <div class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="txtSearchID">ID</label>
+                <asp:TextBox runat="server" ID="txtSearchID" CssClass="form-control" placeholder="ID"></asp:TextBox>
+            </div>
+            <asp:Button runat="server" ID="btnUpdate" Text="Search" CssClass="btn btn-primary" />
+        </div>
+        <div style="margin-top: 5px;">
+            <asp:GridView runat="server" ID="grdMain" Width="100%" CssClass="table table-bordered table-striped table-hover"></asp:GridView>
+        </div>
     </div>
+    <asp:CustomValidator ID="valid" runat="server" Display="None" ValidationGroup="valid"></asp:CustomValidator>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Scripts" runat="server">
 </asp:Content>

@@ -1,7 +1,6 @@
 ﻿CREATE PROCEDURE dbo.IDaoDemo_Get
 	(
-	@ID nvarchar(5),
-	@Code int
+	@ID nvarchar(5)
 	)
 AS
 
@@ -12,7 +11,7 @@ SELECT
 	,[Note]
 FROM	[tbDemo]
 WHERE	[ID] = @ID
-	AND	[Code] = @Code
+	AND	(@ID IS NULL	OR	[ID] LIKE '%' + @ID + '%')
 
 
 RETURN
