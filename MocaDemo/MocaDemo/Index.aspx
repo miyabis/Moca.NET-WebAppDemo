@@ -42,7 +42,7 @@
                 <label class="sr-only" for="txtSearchID">ID</label>
                 <asp:TextBox runat="server" ID="txtSearchID" CssClass="form-control" placeholder="ID"></asp:TextBox>
             </div>
-            <asp:Button runat="server" ID="btnUpdate" Text="Search" CssClass="btn btn-primary" />
+            <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="btn btn-primary" />
         </div>
         <div style="margin-top: 5px;">
             <asp:GridView runat="server" ID="grdMain" Width="100%" CssClass="table table-bordered table-striped table-hover"></asp:GridView>

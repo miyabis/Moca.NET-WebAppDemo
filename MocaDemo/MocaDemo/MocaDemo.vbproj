@@ -213,6 +213,7 @@
   <ItemGroup>
     <Compile Include="Db\IDaoDemo.vb" />
     <Compile Include="Db\Impl\DaoDemo.vb" />
+    <Compile Include="Db\Interceptor\SQLStatementlogger.vb" />
     <Compile Include="Declare.vb" />
     <Compile Include="Resources\Messages.Designer.vb">
       <AutoGen>True</AutoGen>

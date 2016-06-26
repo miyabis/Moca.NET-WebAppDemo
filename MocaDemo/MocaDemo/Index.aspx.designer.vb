@@ -104,13 +104,13 @@ Partial Public Class Index
     Protected WithEvents txtSearchID As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''btnUpdate コントロール。
+    '''btnSearch コントロール。
     '''</summary>
     '''<remarks>
     '''自動生成されたフィールド。
     '''変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
     '''</remarks>
-    Protected WithEvents btnUpdate As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnSearch As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''grdMain コントロール。

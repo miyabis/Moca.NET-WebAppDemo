@@ -72,23 +72,23 @@
         _setGrid()
     End Sub
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         _setGrid()
     End Sub
 
 #End Region
 #Region " Method "
 
-    Private Sub _setGrid()
-        grdMain.DataSource = dao.Get(txtSearchID.Text)
-        grdMain.DataBind()
-    End Sub
-
     Private Sub _validInsert(sender As Object, e As Moca.UpdateEntityValidateArgs)
         Dim webCtrl() As WebControl = New WebControl() {sender}
 
         ' メッセージ設定
         setErrorMessage(e.Caption, Me.valid, webCtrl, e.Value, e.ValidateResultType, e.Min, e.Max)
+    End Sub
+
+    Private Sub _setGrid()
+        grdMain.DataSource = dao.Get(txtSearchID.Text)
+        grdMain.DataBind()
     End Sub
 
 #End Region
