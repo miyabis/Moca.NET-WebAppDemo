@@ -11,6 +11,13 @@ sample application that uses a moca.net
 * [Moca.NET Templates](https://visualstudiogallery.msdn.microsoft.com/7735e52f-74f2-4ac7-8172-11cde77e6290) ([v2010](https://visualstudiogallery.msdn.microsoft.com/f97a7486-560b-425a-aa05-528dd397f5ba))
 * [Moca.NET Code Snippet](https://visualstudiogallery.msdn.microsoft.com/96efa364-a9d3-4352-85fc-c5d117abca7f) ([v2010](https://visualstudiogallery.msdn.microsoft.com/ef40c12b-d48e-45e5-9e18-12726b9ac1ee))
 
+### サンプルのインストール
+サンプル ギャラリーから当サンプルをインストールします。
+![サンプルのインストール](Images\SampleInstall.png)
+
+サンプルのプロジェクトを新しく作成します。
+![サンプルのプロジェクト作成](Images\SampleCreate.png)
+
 ## Web Form プロジェクト作成
 通常通りに新規にプロジェクトを作成してください。  
 ※VB.NET の場合は、Moca.NETのプロジェクトテンプレートを使うこともできます。
