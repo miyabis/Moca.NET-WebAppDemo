@@ -1,35 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <title>Moca.net Web App Demo by miyabis</title>
 
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <title>Moca.net Web App Demo by miyabis</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Moca.net Web App Demo</h1>
-        <h2></h2>
-        <a href="https://github.com/miyabis/Moca.NET-WebAppDemo" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Moca.net Web App Demo</h1>
+        <p class="header"></p>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
-<a id="mocanet-winappdemo" class="anchor" href="#mocanet-winappdemo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Moca.NET-WinAppDemo</h1>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/miyabis/Moca.NET-WebAppDemo/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/miyabis/Moca.NET-WebAppDemo/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/miyabis/Moca.NET-WebAppDemo">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/miyabis">miyabis</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="mocanet-web-form-app-demo" class="anchor" href="#mocanet-web-form-app-demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Moca.NET Web Form App Demo</h1>
 
 <p>sample application that uses a moca.net</p>
 
@@ -48,6 +50,18 @@
 <a href="https://visualstudiogallery.msdn.microsoft.com/96efa364-a9d3-4352-85fc-c5d117abca7f">Moca.NET Code Snippet</a> (<a href="https://visualstudiogallery.msdn.microsoft.com/ef40c12b-d48e-45e5-9e18-12726b9ac1ee">v2010</a>)</li>
 </ul>
 
+<h3>
+<a id="サンプルのインストール" class="anchor" href="#%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>サンプルのインストール</h3>
+
+<p>サンプル ギャラリーから当サンプルをインストールします。
+<img src="https://raw.githubusercontent.com/miyabis/Moca.NET-WebAppDemo/master/Images/SampleInstall.png" alt="サンプルのインストール"></p>
+
+<p>サンプルのプロジェクトを新しく作成します。
+<img src="https://raw.githubusercontent.com/miyabis/Moca.NET-WebAppDemo/master/Images/SampleCreate.png" alt="サンプルのプロジェクト作成"></p>
+
+<h1>
+<a id="新規に作成するには" class="anchor" href="#%E6%96%B0%E8%A6%8F%E3%81%AB%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>新規に作成するには</h1>
+
 <h2>
 <a id="web-form-プロジェクト作成" class="anchor" href="#web-form-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E4%BD%9C%E6%88%90" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web Form プロジェクト作成</h2>
 
@@ -63,6 +77,8 @@
 <li>Web の場合、『<a href="https://www.nuget.org/packages/Moca.NETWebFormsProject/">Moca.NET Project Template Web Form</a>』</li>
 </ul>
 
+<p>※Moca.NETのプロジェクトテンプレートを使ったときは既に追加されているため不要です。</p>
+
 <h4>
 <a id="ライブラリの更新" class="anchor" href="#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E6%9B%B4%E6%96%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ライブラリの更新</h4>
 
@@ -73,12 +89,12 @@
 
 <p>WebConfigTransformAssemblyInfo.(vb or cs) ファイルの log4net 部分のアセンブリ属性を有効にする。</p>
 
-<p>C# : Properties\WebConfigTransformAssemblyInfo.cs file Please cancel comment.</p>
+<p>C# : Properties\WebConfigTransformAssemblyInfo.cs</p>
 
 <pre><code>[assembly: log4net.Config.XmlConfigurator(ConfigFile=@"log4net.config", Watch=true)]
 </code></pre>
 
-<p>VB : My Project\WebConfigTransformAssemblyInfo.vb file Please cancel comment.</p>
+<p>VB : My Project\WebConfigTransformAssemblyInfo.vb</p>
 
 <pre><code>&lt;Assembly: log4net.Config.XmlConfigurator(ConfigFile:="log4net.config", Watch:=True)&gt;
 </code></pre>
@@ -88,12 +104,12 @@
 
 <p>WebConfigTransformAssemblyInfo.(vb or cs) ファイルの Moca 部分のアセンブリ属性を有効にし、暗号種別、暗号化（複合化）したいセクション名を入力する。</p>
 
-<p>C# : add Assembly property.</p>
+<p>C# :</p>
 
 <pre><code>[assembly: Moca.Configuration.SectionProtection(Moca.Configuration.ProtectionProviderType.DPAPI, "Section Name")]
 </code></pre>
 
-<p>VB : add Assembly property.</p>
+<p>VB :</p>
 
 <pre><code>&lt;Assembly: Moca.Configuration.SectionProtection(Moca.Configuration.ProtectionProviderType.DPAPI, "Section Name")&gt;
 </code></pre>
@@ -113,14 +129,14 @@
 <h4>
 <a id="web-フォーム作成" class="anchor" href="#web-%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%BD%9C%E6%88%90" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web フォーム作成</h4>
 
-<p>Moca.NET テンプレートの Web フォームから作成してください。<br>
+<p>Moca.NET テンプレートの 「Web フォーム」から作成してください。<br>
 ※ フォームの継承先が Page から Moca.Web.UI.MocaPage に変更されて作成されます。
 なお、マスターページ、ユーザーコントロール、APIコントローラークラスも同様に Moca のクラスを継承するように作成されます。</p>
 
 <h4>
 <a id="セッションを使う場合" class="anchor" href="#%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E4%BD%BF%E3%81%86%E5%A0%B4%E5%90%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>セッションを使う場合</h4>
 
-<p>Moca.NET テンプレートの Web Session インタフェース を使って作成します。
+<p>Moca.NET テンプレートの 「Web Session インタフェース」を使って作成します。
 インタフェースへセッション変数名でプロパティを定義します。
 セッションを利用するページで Protected 以上でインタフェースを使ったフィールドを定義します。<br>
 ※ 実装クラスは不要です。Moca.NET で実行時に自動的にセッションを割り当てます。</p>
@@ -128,7 +144,7 @@
 <h4>
 <a id="クッキーを使う場合" class="anchor" href="#%E3%82%AF%E3%83%83%E3%82%AD%E3%83%BC%E3%82%92%E4%BD%BF%E3%81%86%E5%A0%B4%E5%90%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>クッキーを使う場合</h4>
 
-<p>Moca.NET テンプレートの Web Cookie インタフェース を使って作成します。<br>
+<p>Moca.NET テンプレートの 「Web Cookie インタフェース」を使って作成します。<br>
 インタフェースには HttpCookie を返す読み取り専用プロパティを定義し、インタフェースを使う時はスニペットの ICookie を使ってフィールドを定義します。</p>
 
 <h4>
@@ -159,13 +175,13 @@ End Interface
 <h3>
 <a id="エンティティ-作成" class="anchor" href="#%E3%82%A8%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3-%E4%BD%9C%E6%88%90" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>エンティティ 作成</h3>
 
-<p>Moca.NET テンプレートの『Entity クラス』で作成します。<br>
+<p>Moca.NET テンプレートの「Entity クラス」で作成します。<br>
 ウィザード形式で、接続先DBを選択しSQLステートメントを実行することでクラスを作成します。</p>
 
 <h3>
 <a id="dao-作成" class="anchor" href="#dao-%E4%BD%9C%E6%88%90" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dao 作成</h3>
 
-<p>Moca.NET テンプレートの『Dao クラス』で作成でき、インタフェースと実装クラスの構成で作成されます。
+<p>Moca.NET テンプレートの「Dao クラス」で作成でき、インタフェースと実装クラスの構成で作成されます。
 接続先はインタフェース毎の指定となり、Dao 属性の引数に設定ファイル（Config）の connectionStrings キーを指定することでインタフェース内のメソッドがデータベースへアクセスできるようになります。
 メソッド内のコードはスニペット（DAODelete、DAOInsert、DAOSelect、DAOStoredPrepare、DAOStoredSelect、DAOStoredUpd、DAOUpdate）を使ってください。</p>
 
@@ -186,7 +202,9 @@ TransactionScope（MSDTC）を使うときは設定ファイルの moca セク�
 <a id="アスペクト" class="anchor" href="#%E3%82%A2%E3%82%B9%E3%83%9A%E3%82%AF%E3%83%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>アスペクト</h2>
 
 <p>Moca.NET では、アスペクト属性を使ってインターセプターを割り込ませることができます。
-アスペクト属性を付けたメソッドを持つクラスは、使う側のクラスをインジェクト（Moca.Di.MocaInjector.Inject()）してください。</p>
+アスペクト属性を付けたメソッドを持つクラスは、使う側のクラスをインジェクト（Moca.Di.MocaInjector.Inject()）してください。
+インターセプタークラスは「AOP メソッドインターセプタークラス」テンプレートを使って作成します。
+DaoクラスでDBをメインに使ったインターセプターは「AOP Daoインターセプタークラス」テンプレートを使用してください。</p>
 
 <h2>
 <a id="注意点" class="anchor" href="#%E6%B3%A8%E6%84%8F%E7%82%B9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>注意点</h2>
@@ -194,25 +212,12 @@ TransactionScope（MSDTC）を使うときは設定ファイルの moca セク�
 <p>Moca.NET では透過プロキシを使っています。Visual Studio 2015で透過型プロキシの値をウォッチしても現状だと見ることができません。下記を参考にオプションの設定を変更することで見ることができるようになります。</p>
 
 <p><a href="https://blogs.msdn.microsoft.com/jpvsblog/2016/03/28/visual-studio-2015-transparentproxy/">Visual Studio 2015で透過型プロキシのランタイム型をウォッチする際の注意点について</a></p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/miyabis/Moca.NET-WebAppDemo/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/miyabis/Moca.NET-WebAppDemo/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/miyabis/Moca.NET-WebAppDemo"></a> is maintained by <a href="https://github.com/miyabis">miyabis</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
     </div>
-
-  
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>
