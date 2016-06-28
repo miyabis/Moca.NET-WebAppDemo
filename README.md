@@ -18,6 +18,8 @@ sample application that uses a moca.net
 サンプルのプロジェクトを新しく作成します。
 ![サンプルのプロジェクト作成](Images/SampleCreate.png)
 
+# 新規に作成するには
+
 ## Web Form プロジェクト作成
 通常通りに新規にプロジェクトを作成してください。  
 ※VB.NET の場合は、Moca.NETのプロジェクトテンプレートを使うこともできます。
