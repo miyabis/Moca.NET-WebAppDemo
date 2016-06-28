@@ -13,10 +13,10 @@ sample application that uses a moca.net
 
 ### サンプルのインストール
 サンプル ギャラリーから当サンプルをインストールします。
-![サンプルのインストール](Images\SampleInstall.png)
+![サンプルのインストール](Images/SampleInstall.png)
 
 サンプルのプロジェクトを新しく作成します。
-![サンプルのプロジェクト作成](Images\SampleCreate.png)
+![サンプルのプロジェクト作成](Images/SampleCreate.png)
 
 ## Web Form プロジェクト作成
 通常通りに新規にプロジェクトを作成してください。  
