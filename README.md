@@ -1,5 +1,7 @@
 Moca.NET Web Form App Demo
 ===================
+[![Build status](https://ci.appveyor.com/api/projects/status/985i6wpctnwyyxv2?svg=true)](https://ci.appveyor.com/project/miyabis/moca-net-webappdemo)
+
 
 sample application that uses a moca.net
 

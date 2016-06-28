@@ -161,10 +161,6 @@
   <ItemGroup>
     <AjaxMin Include="Content\StyleSheet.css" />
     <None Include="App_Readme\Elmah.sqldb.readme.txt" />
-    <Content Include="App_Data\Database1.mdf" />
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Readme\Elmah.txt" />
     <None Include="App_Readme\Scripts\Stored Procedures\ELMAH_GetErrorsXml.sql" />
     <None Include="App_Readme\Scripts\Stored Procedures\ELMAH_GetErrorXml.sql" />

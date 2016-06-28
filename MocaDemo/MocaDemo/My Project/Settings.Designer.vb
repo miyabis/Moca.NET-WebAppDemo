@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integr"& _ 
-            "ated Security=True;Connect Timeout=30;User Instance=False")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\ProjectsV12;Initial Catalog=Db;Integrated Security=True;Poo"& _ 
+            "ling=False;Connect Timeout=30")>  _
         Public ReadOnly Property Db() As String
             Get
                 Return CType(Me("Db"),String)
